@@ -2,16 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/Ravichandra885/c11.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                bat 'mvn clean package'
+                bat '"C:\\Program Files\\apache-maven-3.10.0-bin\\apache-maven-3.10.0\\bin\\mvn.cmd" clean package'
             }
         }
     }
